@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://d3k067jxyacn1"]
+
+[ext_resource type="Script" uid="uid://fn0hacrmy8ir" path="res://main/main.gd" id="1_qv31u"]
+[ext_resource type="PackedScene" uid="uid://bxh83hexpvnt7" path="res://menus/principal/Menu_Principal.tscn" id="2_5kcm4"]
+[ext_resource type="PackedScene" uid="uid://cm8s7cmooxadh" path="res://juego/nivel/Nivel.tscn" id="2_wbnyf"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wbnyf"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_5bp7l"]
+font_size = 50
+
+[node name="Main" type="Node" unique_id=1817175513]
+script = ExtResource("1_qv31u")
+
+[node name="Menu_Principal" parent="." unique_id=1011400417 instance=ExtResource("2_5kcm4")]
+
+[node name="Nivel" parent="." unique_id=53820245 instance=ExtResource("2_wbnyf")]
+position = Vector2(400, 270)
+
+[node name="Panel" type="Panel" parent="." unique_id=700854376]
+z_index = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -260.0
+offset_top = -50.0
+offset_right = -260.0
+offset_bottom = -50.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_wbnyf")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel" unique_id=297888603]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Mensaje_meta" type="Label" parent="Panel/VBoxContainer" unique_id=300223876]
+layout_mode = 2
+text = "¡Ha llegado a la meta!"
+label_settings = SubResource("LabelSettings_5bp7l")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VSeparator" type="VSeparator" parent="Panel/VBoxContainer" unique_id=1687142673]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+
+[node name="Button" type="Button" parent="Panel/VBoxContainer" unique_id=1695231399]
+layout_mode = 2
+text = "Volver a jugar"
+
+[connection signal="jugar_pulsado" from="Menu_Principal" to="." method="_on_menu_principal_jugar_pulsado"]
+[connection signal="meta_alcanzada" from="Nivel" to="." method="_on_nivel_meta_alcanzada"]
+[connection signal="pressed" from="Panel/VBoxContainer/Button" to="." method="_on_button_pressed"]

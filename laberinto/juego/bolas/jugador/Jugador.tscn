@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://dbocj4eyu63wc"]
+
+[ext_resource type="Texture2D" uid="uid://dgow22ms4hvw5" path="res://juego/bolas/jugador/jugador.svg" id="1_2cj0i"]
+[ext_resource type="Script" uid="uid://dlqef0okij4vf" path="res://juego/bolas/jugador/jugador.gd" id="1_4l7ll"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4l7ll"]
+radius = 115.03912
+
+[node name="Jugador" type="CharacterBody2D" unique_id=182685877]
+script = ExtResource("1_4l7ll")
+
+[node name="Imagen" type="Sprite2D" parent="." unique_id=1807407670]
+texture = ExtResource("1_2cj0i")
+
+[node name="Colisión" type="CollisionShape2D" parent="." unique_id=440123424]
+shape = SubResource("CircleShape2D_4l7ll")

@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://cm8s7cmooxadh"]
+
+[ext_resource type="PackedScene" uid="uid://cjid66hj6bf8y" path="res://juego/laberinto/Laberinto.tscn" id="1_0thrb"]
+[ext_resource type="Script" uid="uid://uynnamll4yep" path="res://juego/nivel/nivel.gd" id="1_i24by"]
+[ext_resource type="PackedScene" uid="uid://dbocj4eyu63wc" path="res://juego/bolas/jugador/Jugador.tscn" id="2_kvd15"]
+[ext_resource type="PackedScene" uid="uid://cpsqn0611bwr" path="res://juego/bolas/meta/Meta.tscn" id="3_ph04q"]
+
+[node name="Nivel" type="Node2D" unique_id=53820245]
+script = ExtResource("1_i24by")
+
+[node name="Laberinto" parent="." unique_id=901510907 instance=ExtResource("1_0thrb")]
+position = Vector2(304, 21)
+
+[node name="Jugador" parent="." unique_id=182685877 instance=ExtResource("2_kvd15")]
+z_index = 1
+position = Vector2(357, 464)
+scale = Vector2(0.2, 0.2)
+
+[node name="Meta" parent="." unique_id=1194295797 instance=ExtResource("3_ph04q")]
+position = Vector2(732.5, 80)
+scale = Vector2(0.2, 0.2)
+
+[connection signal="body_entered" from="Meta" to="." method="_on_meta_body_entered"]

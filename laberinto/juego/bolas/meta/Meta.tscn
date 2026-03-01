@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://cpsqn0611bwr"]
+
+[ext_resource type="Texture2D" uid="uid://bd80hmn15dy32" path="res://juego/bolas/meta/meta.svg" id="1_n1qcv"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qsvbg"]
+radius = 115.01739
+
+[node name="Meta" type="Area2D" unique_id=1194295797]
+
+[node name="Imagen" type="Sprite2D" parent="." unique_id=724914615]
+texture = ExtResource("1_n1qcv")
+
+[node name="Colisión" type="CollisionShape2D" parent="." unique_id=833145004]
+shape = SubResource("CircleShape2D_qsvbg")

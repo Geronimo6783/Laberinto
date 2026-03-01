@@ -1,0 +1,122 @@
+[gd_scene format=3 uid="uid://cjid66hj6bf8y"]
+
+[node name="Laberinto" type="Node2D" unique_id=901510907]
+
+[node name="Exterior" type="StaticBody2D" parent="." unique_id=440237981]
+
+[node name="Poligono_1" type="Polygon2D" parent="Exterior" unique_id=674321457]
+color = Color(0, 0.56062853, 0.1701029, 1)
+polygon = PackedVector2Array(0, 0, 0, 25, 500, 25, 500, 0)
+
+[node name="Colision_1" type="CollisionPolygon2D" parent="Exterior" unique_id=1071491580]
+visible = false
+polygon = PackedVector2Array(0, 0, 0, 25, 500, 25, 500, 0)
+
+[node name="Poligono_2" type="Polygon2D" parent="Exterior" unique_id=1401209872]
+color = Color(0, 0.56078434, 0.16862746, 1)
+polygon = PackedVector2Array(0, 25, 25, 25, 25, 500, 0, 500)
+
+[node name="Colision_2" type="CollisionPolygon2D" parent="Exterior" unique_id=24309508]
+visible = false
+build_mode = 1
+polygon = PackedVector2Array(0, 25, 25, 25, 25, 500, 0, 500)
+
+[node name="Poligono_3" type="Polygon2D" parent="Exterior" unique_id=1655773437]
+color = Color(0, 0.56078434, 0.16862746, 1)
+polygon = PackedVector2Array(25, 500, 25, 475, 500, 475, 500, 500)
+uv = PackedVector2Array(-421, -42.5, -423, 44.5, 16, 47.5, 18, -42.5)
+
+[node name="Colision_3" type="CollisionPolygon2D" parent="Exterior" unique_id=1065275070]
+visible = false
+polygon = PackedVector2Array(25, 475, 500, 475, 500, 500, 25, 500)
+
+[node name="Poligono_4" type="Polygon2D" parent="Exterior" unique_id=1845200386]
+color = Color(0, 0.56078434, 0.16862746, 1)
+polygon = PackedVector2Array(475, 25, 500, 25, 500, 475, 475, 475)
+uv = PackedVector2Array(-341, -47.5, -254, -45.5, -250, 19.5, -333, 18.5)
+
+[node name="Colision_4" type="CollisionPolygon2D" parent="Exterior" unique_id=967941263]
+visible = false
+polygon = PackedVector2Array(475, 25, 500, 25, 500, 475, 475, 475)
+
+[node name="Interior" type="StaticBody2D" parent="." unique_id=413940450]
+
+[node name="Poligono_1" type="Polygon2D" parent="Interior" unique_id=730096073]
+color = Color(0, 0.56078434, 0.16862746, 1)
+polygon = PackedVector2Array(80, 205, 100, 205, 100, 475, 80, 475)
+
+[node name="Colision_1" type="CollisionPolygon2D" parent="Interior" unique_id=420040391]
+visible = false
+polygon = PackedVector2Array(80, 205, 100, 205, 100, 475, 80, 475)
+
+[node name="Poligono_2" type="Polygon2D" parent="Interior" unique_id=745129530]
+color = Color(0, 0.56078434, 0.16862746, 1)
+polygon = PackedVector2Array(360, 475, 380, 475, 380, 195, 360, 195)
+
+[node name="Colision_2" type="CollisionPolygon2D" parent="Interior" unique_id=934505775]
+visible = false
+polygon = PackedVector2Array(360, 475, 380, 475, 380, 195, 360, 195)
+
+[node name="Poligono_3" type="Polygon2D" parent="Interior" unique_id=1434642809]
+color = Color(0, 0.56078434, 0.16862746, 1)
+polygon = PackedVector2Array(240, 475, 260, 475, 260, 395, 240, 395)
+
+[node name="Colision_3" type="CollisionPolygon2D" parent="Interior" unique_id=487907331]
+visible = false
+polygon = PackedVector2Array(240, 475, 260, 475, 260, 395, 240, 395)
+
+[node name="Poligono_4" type="Polygon2D" parent="Interior" unique_id=2106091883]
+color = Color(0, 0.56078434, 0.16862746, 1)
+polygon = PackedVector2Array(25, 100, 25, 120, 100, 120, 100, 100)
+
+[node name="Colision_4" type="CollisionPolygon2D" parent="Interior" unique_id=870271046]
+visible = false
+polygon = PackedVector2Array(25, 100, 100, 100, 100, 120, 25, 120)
+
+[node name="Poligono_5" type="Polygon2D" parent="Interior" unique_id=1990833928]
+color = Color(0, 0.56078434, 0.16862746, 1)
+polygon = PackedVector2Array(190, 25, 210, 25, 210, 100, 190, 100)
+
+[node name="Colision_5" type="CollisionPolygon2D" parent="Interior" unique_id=187566756]
+visible = false
+polygon = PackedVector2Array(190, 25, 210, 25, 210, 100, 190, 100)
+
+[node name="Poligono_6" type="Polygon2D" parent="Interior" unique_id=1272743567]
+color = Color(0, 0.56078434, 0.16862746, 1)
+polygon = PackedVector2Array(240, 415, 240, 395, 180, 395, 180, 415)
+
+[node name="Colision_6" type="CollisionPolygon2D" parent="Interior" unique_id=1223856375]
+visible = false
+polygon = PackedVector2Array(180, 395, 240, 395, 240, 415, 180, 415)
+
+[node name="Poligono_7" type="Polygon2D" parent="Interior" unique_id=732892916]
+color = Color(0, 0.56078434, 0.16862746, 1)
+polygon = PackedVector2Array(200, 395, 180, 395, 180, 205, 200, 205)
+
+[node name="Colision_7" type="CollisionPolygon2D" parent="Interior" unique_id=21486954]
+visible = false
+polygon = PackedVector2Array(180, 205, 200, 205, 200, 395, 180, 395)
+
+[node name="Poligono_8" type="Polygon2D" parent="Interior" unique_id=1321294692]
+color = Color(0, 0.56078434, 0.16862746, 1)
+polygon = PackedVector2Array(360, 25, 380, 25, 380, 120, 360, 120)
+
+[node name="Colision_8" type="CollisionPolygon2D" parent="Interior" unique_id=1561263577]
+visible = false
+polygon = PackedVector2Array(360, 25, 380, 25, 380, 120, 360, 120)
+
+[node name="Poligono_9" type="Polygon2D" parent="Interior" unique_id=1162333024]
+color = Color(0, 0.56078434, 0.16862746, 1)
+polygon = PackedVector2Array(360, 100, 360, 120, 280, 120, 280, 100)
+
+[node name="Colision_9" type="CollisionPolygon2D" parent="Interior" unique_id=1471802853]
+visible = false
+polygon = PackedVector2Array(280, 100, 360, 100, 360, 120, 280, 120)
+
+[node name="Poligono_10" type="Polygon2D" parent="Interior" unique_id=761898721]
+color = Color(0, 0.56078434, 0.16862746, 1)
+polygon = PackedVector2Array(280, 120, 300, 120, 300, 190, 280, 190)
+
+[node name="Colision_10" type="CollisionPolygon2D" parent="Interior" unique_id=1687012543]
+visible = false
+polygon = PackedVector2Array(280, 120, 300, 120, 300, 190, 280, 190)
